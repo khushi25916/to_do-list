@@ -23,12 +23,12 @@ def main():
         # Handle the 'completed' status here (e.g., update your data)
     
 
-    # Sidebar buttons
+    #  button for deletion
     if st.button("Delete All Tasks", key="delete_all"):
         st.session_state.tasks = []
 
 def display_tasks(completed=False):
-    st.write("### Tasks")
+    st.write("# Tasks")
     for i, t in enumerate(st.session_state.tasks):
         if t["completed"] == completed:
             st.checkbox(f"{i + 1}. {t['task_name']}", key=f"task_{i}")
